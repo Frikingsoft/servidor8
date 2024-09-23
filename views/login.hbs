@@ -4,8 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/index.css">
 </head>
 <body>
-    Pagina de login
+    {{> menu}}
+    <div>
+        <input type="text" name="Usuario" id="Usuario">
+        <input type="password" name="Contraseña" id="Contraseña">
+        <button onclick="enviar()">Enviar</button>
+    </div>
+    <script src="/login.js"></script>
 </body>
 </html>

@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.menu{
+    width: 64px;
+    height: 100vh;
+    background-color: rgb(10, 46, 118);
+    display: flex;
+    flex-wrap: wrap;
+    align-content:center;
+    gap: 20px;
+}
+.boton{
+    width: 64px;
+    height: 64px;
+    border-radius:50%
+}
+.pagina{
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: 33vh 33vh 34vh;
+}
+.logo{
+    background-color: brown;
+    grid-column-start:10;
+    grid-column-end:12;
+    grid-row-start:1;
+    grid-row-end:2;
+}
