@@ -20,7 +20,9 @@
 .pagina{
     display: grid;
     grid-template-columns: repeat(12,1fr);
-    grid-template-rows: 33vh 33vh 34vh;
+    grid-template-rows: 25vh 25vh 25vh 25vh;
+    background-image: url("/fondo.png");
+    
 }
 .logo{
     background-color: brown;

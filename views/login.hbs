@@ -5,13 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/login.css">
 </head>
-<body>
+<body class="pagina">
     {{> menu}}
-    <div>
-        <input type="text" name="Usuario" id="Usuario">
-        <input type="password" name="Contraseña" id="Contraseña">
-        <button onclick="enviar()">Enviar</button>
+    <div class="login">
+        <div class="entradas">
+            <input type="text" name="Usuario" id="Usuario">
+            <input type="password" name="Contraseña" id="Contraseña">
+        </div>
+        <div class="boton_login">
+            <button onclick="enviar()">Enviar</button>
+        </div>
     </div>
     <script src="/login.js"></script>
 </body>
