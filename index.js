@@ -2,6 +2,8 @@ import express from "express"
 import hbs from "hbs"
 import { fileURLToPath } from "url"; // Para obtener la ruta del archivo actual
 import { dirname } from "path"; // Para trabajar con rutas de archivo
+
+import { encriptar_contra } from "./funciones/funciones.js"
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -20,7 +22,8 @@ servidor.get("/login",(req,res)=>{
     res.render("login.hbs")
 })
 servidor.post("/login", (req, res) => {
-    const { Usuario, Contraseña } = req.body
+    let { Usuario, Contraseña } = req.body
+    Contraseña = encriptar_contra(Contraseña)
     console.log(`Usuario: ${Usuario}, Contraseña: ${Contraseña}`)
     res.status(200).send("Datos recibidos")
 });
