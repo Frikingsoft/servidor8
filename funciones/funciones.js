@@ -4,7 +4,9 @@ const encriptar_contra = (contra) =>{
     contra = bcrypt.hashSync(contra, salt)
     return contra
 }
-
+const guardar_db = ()=>{
+    
+}
 export {
     encriptar_contra
 }
