@@ -7,6 +7,9 @@ const encriptar_contra = (contra) =>{
 const guardar_db = ()=>{
     
 }
+const conectar_db = () =>{
+    
+}
 export {
     encriptar_contra
 }
