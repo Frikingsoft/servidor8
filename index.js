@@ -5,7 +5,7 @@ import morgan from "morgan"
 import { fileURLToPath } from "url"; // Para obtener la ruta del archivo actual
 import { dirname } from "path"; // Para trabajar con rutas de archivo
 import { encriptar_contra } from "./funciones/funciones.js";
-import mysql from "mysql2/promise"; // Usando la versión Promise de mysql2
+//import mysql from "mysql2/promise"; // Usando la versión Promise de mysql2
 import dotenv from "dotenv"
 dotenv.config()
 const __filename = fileURLToPath(import.meta.url);
@@ -19,14 +19,14 @@ servidor.use(express.json());
 servidor.use(express.static(`${__dirname}/publicos`));
 servidor.set("view engine", "hbs");
 hbs.registerPartials(`${__dirname}/views/partials`);
-
+/*
 const conexion = await mysql.createConnection({
     host: process.env.ip,
     user: process.env.usuario,
     password: process.env.contra,
     database: process.env.db
 });
-conexion
+conexion*/
 servidor.get("/", (req, res) => {
     res.status(200).render("index.hbs");
 });
